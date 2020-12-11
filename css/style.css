@@ -109,6 +109,7 @@ nav{
 .footer{
     background-color: black;
     height: 200px;
+    padding: 20px;
 }
 
 .footer-logo{
@@ -117,9 +118,9 @@ nav{
     padding: 30px 40px;
 }
 
-.footer-list li{
+.footer-list ul li a{
     float: right;
     color: #fff;
     font-size: 20px;
-    padding-bottom: 0px;
+    text-decoration: none;
 }
