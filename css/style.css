@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap");
 
 :root {
-  --blue: #2492f9;
+  --blue: #2889e4;
+  --tosca: #48ebcf;
 }
 
 * {
-  font-family: "Nunito", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +17,7 @@
 }
 
 *::selection {
-  background: var(--blue);
+  background: rgb(226, 222, 222);
   color: #333;
 }
 
@@ -59,7 +60,7 @@ section {
 }
 
 .btn i {
-  padding: 0 0.5rem;
+  padding: 0 0.2rem;
   font-size: 1.8rem;
 }
 
@@ -203,7 +204,7 @@ header .navbar ul li a:hover {
 }
 
 .about .row .info span {
-  color: var(--blue);
+  color: var(--tosca);
   padding: 0 0.5rem;
 }
 
@@ -224,7 +225,7 @@ header .navbar ul li a:hover {
 
 .about .row .counter .box span {
   font-size: 4rem;
-  color: var(--blue);
+  color: var(--tosca);
 }
 
 .about .row .counter .box img {
@@ -288,7 +289,7 @@ header .navbar ul li a:hover {
   background: var(--blue);
 }
 
-.portfolio .box-container {
+.projects .box-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,7 +297,7 @@ header .navbar ul li a:hover {
   padding: 2rem 0;
 }
 
-.portfolio .box-container .box {
+.projects .box-container .box {
   height: 20rem;
   width: 26rem;
   border-radius: 1rem;
@@ -305,13 +306,13 @@ header .navbar ul li a:hover {
   cursor: pointer;
 }
 
-.portfolio .box-container .box img {
+.projects .box-container .box img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.portfolio .box-container .box:hover img {
+.projects .box-container .box:hover img {
   transform: scale(1.2);
 }
 
@@ -353,7 +354,11 @@ header .navbar ul li a:hover {
 .contact .row .content .title {
   color: #fff;
   font-size: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.contact .row .content .title p {
+  font-size: 0.5rem;
 }
 
 .contact .row .content .info h3 {
@@ -369,6 +374,24 @@ header .navbar ul li a:hover {
   padding-right: 1rem;
   color: var(--blue);
 }
+
+.contact .row .content .chat i {
+  display: inline-block;
+  align-items: center;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  padding-right: 3rem;
+  justify-content: space-between;
+  color: var(--blue);
+}
+
+/* .footer { 
+  background-size: auto;
+  margin: 0 auto;
+  align-items: center;
+  background-color: rgb(53, 53, 53);
+  color: #fff;
+}*/
 
 .top {
   position: fixed;
