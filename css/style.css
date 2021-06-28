@@ -36,6 +36,7 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background: var(--blue);
+  border-radius: 2em;
 }
 
 body {
@@ -108,6 +109,13 @@ header .user img {
 header .user .name {
   font-size: 3.5rem;
   color: #fff;
+  margin-bottom: 1rem;
+}
+
+header .user a {
+  font-size: 2rem;
+  color: #fff;
+  padding: 1rem;
 }
 
 header .user .post {
@@ -321,6 +329,7 @@ header .navbar ul li a:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 8em;
 }
 
 .contact .row .content {
@@ -361,6 +370,10 @@ header .navbar ul li a:hover {
   font-size: 0.5rem;
 }
 
+.contact .row .content .title span {
+  color: var(--blue);
+}
+
 .contact .row .content .info h3 {
   display: flex;
   align-items: center;
@@ -372,16 +385,6 @@ header .navbar ul li a:hover {
 
 .contact .row .content .info h3 i {
   padding-right: 1rem;
-  color: var(--blue);
-}
-
-.contact .row .content .chat i {
-  display: inline-block;
-  align-items: center;
-  font-size: 2.5rem;
-  padding-top: 1rem;
-  padding-right: 3rem;
-  justify-content: space-between;
   color: var(--blue);
 }
 
