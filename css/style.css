@@ -388,13 +388,20 @@ header .navbar ul li a:hover {
   color: var(--blue);
 }
 
-/* .footer { 
-  background-size: auto;
-  margin: 0 auto;
-  align-items: center;
-  background-color: rgb(53, 53, 53);
+.btn-kirim {
+  padding: 0.7rem 3rem;
+  background: #333;
   color: #fff;
-}*/
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+
+.btn-kirim:hover {
+  background-color: #0785ac;
+}
+
 
 .top {
   position: fixed;
