@@ -36,3 +36,19 @@ $(document).ready(function(){
   });
 
 });
+
+// Contact Form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw8G6EBTWo-irXJDwoLDVkWH505OMo-9xpAMMe3fymHswYrGjFq1OYGRX5cyuRXUPB8/exec'
+  const form = document.forms['ryanmoehs-contact-form'];
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then((response) => {
+        // munculin alert
+        alert("Thank you! Your feedback or message has been sent.");
+        // reset form
+        form.reset();
+        console.log('Success!', response);
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
