@@ -1,54 +1,20 @@
-$(document).ready(function(){
+const cacheKey = "Click";
+if (typeof (Storage) !== "undefined") {
 
-  $('#menu').click(function(){
-    $(this).toggleClass('fa-times');
-    $('header').toggleClass('toggle');
+  // pengecekkan apakah data sessionStorage dengan key NUMBER tersedia atau belum
+  if (localStorage.getItem(cacheKey) === "undefined") {
+    // Jika belum maka akan atur dengan nilai awal yakni 0
+    localStorage.setItem(cacheKey, 0);
+  }
+
+  const button = document.querySelector("#btnCount");
+  const count = document.querySelector("#counter");
+  button.addEventListener('click', function () {
+    let number = localStorage.getItem(cacheKey);
+    number++;
+    localStorage.setItem(cacheKey, number);
+    count.innerText = localStorage.getItem(cacheKey);
   });
-
-  $(window).on('scroll load',function(){
-
-    $('#menu').removeClass('fa-times');
-    $('header').removeClass('toggle');
-
-    if($(window).scrollTop() > 0){
-      $('.top').show();
-    }else{
-      $('.top').hide();
-    }
-
-  });
-
-  // smooth scrolling 
-
-  $('a[href*="#"]').on('click',function(e){
-
-    e.preventDefault();
-
-    $('html, body').animate({
-
-      scrollTop : $($(this).attr('href')).offset().top,
-
-    },
-      500, 
-      'linear'
-    );
-
-  });
-
-});
-
-// Contact Form
-const scriptURL = 'https://script.google.com/macros/s/AKfycbw8G6EBTWo-irXJDwoLDVkWH505OMo-9xpAMMe3fymHswYrGjFq1OYGRX5cyuRXUPB8/exec'
-  const form = document.forms['ryanmoehs-contact-form'];
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then((response) => {
-        // munculin alert
-        alert("Thank you! Your feedback or message has been sent.");
-        // reset form
-        form.reset();
-        console.log('Success!', response);
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
+} else {
+  alert("Browser tidak mendukung Web Storage")
+}
