@@ -2,6 +2,7 @@
 
 :root {
   --bg_dark: #1E1E20;
+  --bg_purple: #b828e4;
   --txt_blue: #2889e4;
   --txt_white: #ffffff;
 }
@@ -30,9 +31,7 @@ body {
   justify-content: space-between;
   padding: 1em;
   border-radius: 25px;
-  box-shadow: 0 0 0.75rem var(--txt_white);
-  -webkit-box-shadow: 0 0 0.75rem var(--txt_white);
-  animation: moving 50s infinite linear;
+  animation: changeShadow 20s infinite linear;
 }
 
 .container img{
@@ -70,34 +69,34 @@ body {
   }
 }
 
-@keyframes moving {
+@keyframes changeShadow {
   0%{
-    transform: translateX(0);
+    box-shadow: 0 0 0.75rem var(--txt_white);
   }25%{
-    transform: translateX(100vh);
+    box-shadow: 0 0 0.75rem var(--bg_purple);
   }50%{
-    transform: translateX(0);
+    box-shadow: 0 0 0.75rem var(--txt_white);
   }75%{
-    transform: translateX(-100vh);
+    box-shadow: 0 0 0.75rem var(--txt_blue);
   }100%{
-    transform: translateX(0);
+    box-shadow: 0 0 0.75rem var(--txt_white);
   }
 }
-@-webkit-keyframes moving {
+@-webkit-keyframes changeShadow {
   0%{
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    box-shadow: 0 0 0.75rem var(--txt_white);
+    -webkit-box-shadow: 0 0 0.75rem var(--txt_white);
   }25%{
-    -webkit-transform: translateX(100vh);
-    transform: translateX(100vh);
+    box-shadow: 0 0 0.75rem var(--bg_purple);
+    -webkit-box-shadow: 0 0 0.75rem var(--bg_purple);
   }50%{
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    box-shadow: 0 0 0.75rem var(--txt_white);
+    -webkit-box-shadow: 0 0 0.75rem var(--txt_white);
   }75%{
-    -webkit-transform: translateX(-100vh);
-    transform: translateX(-100vh);
+    box-shadow: 0 0 0.75rem var(--bg_purple);
+    -webkit-box-shadow: 0 0 0.75rem var(--txt_blue);
   }100%{
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    box-shadow: 0 0 0.75rem var(--txt_white);
+    -webkit-box-shadow: 0 0 0.75rem var(--txt_white);
   }
 }
