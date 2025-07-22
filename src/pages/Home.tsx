@@ -1,6 +1,6 @@
 import { titleChange } from "../utils/titleChanger";
 import Button from "../components/Button";
-import Card from "../components/Card";
+// import Card from "../components/Card";
 import { Link } from "react-router";
 
 const Home = () => {
