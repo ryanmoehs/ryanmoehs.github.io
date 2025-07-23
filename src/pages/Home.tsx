@@ -2,6 +2,7 @@ import { titleChange } from "../utils/titleChanger";
 import Button from "../components/Button";
 // import Card from "../components/Card";
 import { Link } from "react-router";
+import { IoMdDocument } from "react-icons/io";
 
 const Home = () => {
   titleChange("ryanmoehs");
@@ -13,13 +14,12 @@ const Home = () => {
           <span className='underline'>Ryan Muhammad Satria</span>
         </h1>
         <h1 className='text-4xl font-semibold'>
-          a <span className='text-cyan-500'>Web Developer</span>
+          a <span className='text-amber-800 dark:text-cyan-500'>Web Developer</span>
         </h1>
 
         <div className='flex justify-center gap-x-4'>
-          <Button color='bg-cyan-700'>Get Started</Button>
           <Link to='https://drive.google.com/file/d/1ZFl1GLDERMjnBrVOaIQD--yGrrcFwadz/view?usp=sharing' target='_blank'>
-            <Button color='bg-cyan-700'>My CV</Button>
+            <Button color='bg-amber-400 dark:bg-cyan-600'><IoMdDocument/> My CV</Button>
           </Link>
         </div>
       </div>
