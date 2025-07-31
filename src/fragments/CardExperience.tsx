@@ -3,13 +3,14 @@ import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { MdLocationPin, MdCalendarMonth  } from "react-icons/md";
 
 
-interface CardExperienceProps {
-  image?: string;
-  children?: React.ReactNode;
-  className?: string;
-}
+// interface CardExperienceProps {
+//   image?: string;
+//   children?: React.ReactNode;
+//   className?: string;
+// }
 
-const CardExperience = ({ image, children, className }: CardExperienceProps) => {
+// const CardExperience = ({ image, children, className }: CardExperienceProps) => {
+const CardExperience = () => {
   return (
     <Card className='p-8 rounded-lg '>
       <div className='flex space-x-4'>
