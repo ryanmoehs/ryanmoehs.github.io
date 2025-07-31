@@ -1,20 +1,17 @@
 import { titleChange } from "../utils/titleChanger";
-import { Link } from "react-router";
 
-interface NotFoundProps {
+interface PlaygroundProps {
   title: string;
   description: string;
 }
-
-const NotFound = ({ title, description }: NotFoundProps) => {
-  titleChange("Not Found");
+const Playground = ({ title, description }: PlaygroundProps) => {
+  titleChange("ryanmoehs - playground");
   return (
     <>
       {title && <h1 className='text-3xl font-bold mt-8 mb-2 text-center'>{title}</h1>}
       {description && <p className='text-lg mb-6 text-center text-gray-700 dark:text-gray-300'>{description}</p>}
-      <p className="text-center">Go Back to <Link to="/" className="hover:underline">Home Page</Link></p>
     </>
   );
 };
 
-export default NotFound;
+export default Playground;

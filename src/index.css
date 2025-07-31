@@ -8,10 +8,36 @@
   --font-code: "Jetbrains Mono", monospace;
   --color-btn-brown: #b96c4e;
   --color-text-brown: #FEF3C6;
+
+  --animate-dark-name: darkTextChange 10s infinite linear;
+  --animate-rotate-logo: logoRotate 10s infinite linear;
+
+  @keyframes logoRotate {
+    from{
+      transform: rotate(0deg);
+    }to{
+      transform: rotate(359deg);
+    }
+  }
+
+  @keyframes darkTextChange {
+    0%{
+      color: oklch(98.5% 0 0);
+    } 25% {
+      color: oklch(69.6% 0.17 162.48);
+    } 50% {
+      color: oklch(71.5% 0.143 215.221);
+    } 75% {
+      color: oklch(62.7% 0.265 303.9);
+    } 100% {
+      color: oklch(98.5% 0 0)
+  }
+  }
 }
 
-.active{
+.active {
+    text-decoration: underline 2px #b96c4e;
+}
+.dark .active {
     text-decoration: underline 2px #36e1e1;
-    /* padding: .5rem;
-    background-color: rgba(0, 255, 255, 0.573); */
 }

@@ -1,29 +1,33 @@
 import { titleChange } from "../utils/titleChanger";
-import Card from "../components/Card";
+import Button from "../components/Button";
+import CardExperience from "../fragments/CardExperience";
+interface ExperiencesProps {
+  title?: string;
+  description?: string;
+}
 
-const Experiences = () => {
-  titleChange("ryanmoehs - Experiences");
+const Experiences = ({ title, description }: ExperiencesProps) => {
+  titleChange("ryanmoehs - experiences");
   return (
-    <div className='flex flex-col items-center gap-y-2'>
-      <h1 className='text-2xl font-semibold text-white'>Experiences</h1>
-      <p className='text-medium text-white'>Various Ryan's experience</p>
-      <div className='flex flex-col gap-y-4'>
-        <div className='grid grid-cols-2 gap-4'>
-          {/* <div className='p-6 items-center bg-slate-600 rounded-lg'>Test 1</div>
-          <div className='p-6 items-center bg-slate-600 rounded-lg'>Test 1</div> */}
-          <Card>Test 1</Card>
-          <Card>Test 1</Card>
-          <Card>Test 1</Card>
-          <Card>Test 1</Card>
-        </div>
-        <div className='grid grid-cols-4 gap-4'>
-          <div className='p-6 items-center bg-slate-600 rounded-lg'>Test 1</div>
-          <div className='p-6 items-center bg-slate-600 rounded-lg'>Test 1</div>
-          <div className='p-6 items-center bg-slate-600 rounded-lg'>Test 1</div>
-          <div className='p-6 items-center bg-slate-600 rounded-lg'>Test 1</div>
-        </div>
+    <>
+      {title && (
+        <h1 className="text-3xl font-bold mt-8 mb-2 text-center">{title}</h1>
+      )}
+      {description && (
+        <p className="text-lg mb-6 text-center text-gray-700 dark:text-gray-300">
+          {description}
+        </p>
+      )}
+      <div className="flex gap-x-4 justify-center">
+        <Button color="bg-amber-400 dark:bg-cyan-600">Professional</Button>
+        <Button color="bg-amber-400 dark:bg-cyan-600">Organizational</Button>
       </div>
-    </div>
+      <div className="flex flex-col gap-y-4 w-full p-16">
+        <CardExperience></CardExperience>
+        <CardExperience></CardExperience>
+        <CardExperience></CardExperience>
+      </div>
+    </>
   );
 };
 

@@ -4,8 +4,8 @@ import DarkModeToggle from "./DarkModeToggle";
 import { ThemeProvider } from "../contexts/theme";
 
 export function Navbar() {
+  const isDark = localStorage.getItem("darkMode");
   const [darkMode, setdarkMode] = useState(() => {
-    const isDark = localStorage.getItem("darkMode");
     return isDark === "true";
   });
 
@@ -28,10 +28,14 @@ export function Navbar() {
   }, [darkMode]);
 
   return (
-    <div className='sticky top-0 bg-amber-200 dark:bg-slate-800'>
+    <div className='sticky top-0 bg-amber-200 dark:bg-slate-800 z-10'>
       <div className='flex items-center justify-between px-8 py-4'>
         <Link to='/'>
+        {isDark === "false" ? (
           <img src='/favicon.ico' alt='ryanmoehs logo' className='w-12' />
+        ) : (
+          <img src='/logo_black.webp' alt='ryanmoehs logo' className='w-12' />
+        )}
         </Link>
         <ThemeProvider value={{darkMode, toggleDarkMode}}>
           <div className='flex gap-x-6'>
@@ -47,6 +51,10 @@ export function Navbar() {
               </NavLink>
               <NavLink to='/contact'>
                 <li>/contacts</li>
+              </NavLink>
+              <li>|</li>
+              <NavLink to='/playground'>
+                <li>/play</li>
               </NavLink>
             </ul>
             <DarkModeToggle />
