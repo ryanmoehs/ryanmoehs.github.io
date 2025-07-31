@@ -1,7 +1,6 @@
 import { titleChange } from "../utils/titleChanger";
 import { Link } from "react-router";
 import { FaLinkedin, FaGithub, FaMailBulk } from "react-icons/fa";
-import Button from "../components/Button";
 
 interface ContactProps {
   title: string;
