@@ -1,0 +1,65 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "link": "https://github.com/ryanmoehs/toefl-counter",
+            "demo": "http://ryanmoehs.github.io/toefl-counter",
+            "url_image": "/img/projects/toefl_counter.jpeg",
+            "title": "TOEFL Score Counter",
+            "category": "Web",
+            "type": "technical",
+            "description": "Simple TOEFL Score counter using DOM manipulation",
+            "tech_stack": ["HTML", "Javascript", "Bootstrap"]
+        },
+        {
+            "id": 2,
+            "link": "https://github.com/ryanmoehs/bve-pressless",
+            "demo": "https://youtu.be/zJsPiHQJqWM?si=_2J-f2ve47r41m8p",
+            "url_image": "img/projects/bve_pressless.webp",
+            "title": "BVE Presless",
+            "category": "Desktop",
+            "type": "technical",
+            "description": "Computer Vision-based BVE Trainsim Controller. Replace the keyboard function and desktop-based",
+            "tech_stack": ["Python", "Mediapipe", "OpenCV"]
+        },
+        {
+            "id": 3,
+            "link": "https://github.com/ryanmoehs/JENERET",
+            "url_image": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "JENERET",
+            "category": "Desktop",
+            "type": "technical",
+            "description": "Simple Certificate Generator. Can be used as single file and bulk using wordlist.",
+            "tech_stack": ["Python", "OpenCV", "Tkinter"]
+        },
+        {
+            "id": 4,
+            "link": "https://google.com",
+            "url_image": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "GridGeoAlert",
+            "category": "Web",
+            "type": "technical",
+            "description": "Geographical Information System for Trafo Reporting. There's a map for mapping the trafo location",
+            "tech_stack": ["Laravel", "Leaflet", "MySQL", "Tailwind"]
+        },
+        {
+            "id": 5,
+            "url_image": "/img/projects/lrs_dashboard.png",
+            "title": "LRS DB Maintenance",
+            "category": "Web",
+            "type": "technical",
+            "description": "A Dashboard for server and database monitoring and reporting. This project is for a introducing to new technology in LRS.",
+            "tech_stack": ["Bun.js", "React.js", "Elysia.js", "PRISMA", "MySQL"]
+        },
+        {
+            "id": 6,
+            "link": "https://github.com/RoneAllza/ta-ghgdashboard-laravelversion",
+            "url_image": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "EMisi",
+            "category": "Web",
+            "type": "technical",
+            "description": "Greenhouse Gas measurement utilizing IoT and Scope 1 measurement. Mixing tier 1 and tier 2 method, the app integrated with exporting feature",
+            "tech_stack": ["Laravel", "MQTT", "MySQL", "Tailwind", "Excel"]
+        }
+    ]
+}
