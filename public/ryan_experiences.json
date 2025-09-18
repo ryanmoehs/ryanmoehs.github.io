@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "orgPic": "/img/logo-lrs.webp",
+            "orgComp": "PT Len Railway System",
+            "position": "Programmer and System Analyst Intern",
+            "location": "Bandung, Indonesia",
+            "duration": "Sep 2024 - Dec 2024",
+            "description": [
+                "Developed a web-based server and database reporting system using React.js and Elysia.js to generate daily, monthly, and annual server and database reports.",
+                "Collaborated with the team to migrate the company's applications from PHP to Javascript to improve application scalability and performance"
+            ]
+        },
+        {
+            "id": 2,
+            "orgPic": "https://media.licdn.com/dms/image/v2/C4D0BAQFuUirBWTzjYg/company-logo_200_200/company-logo_200_200/0/1658471918606/techbrosgroup_logo?e=1756944000&v=beta&t=QObu_YsQwlz0vOd258iCLIVfpKBSoLy7eJk87nagPvw",
+            "orgComp": "Techbros",
+            "position": "Frontend Developer Intern",
+            "location": "Bandung, Indonesia",
+            "duration": "Sep 2023 - Jan 2024",
+            "description": [
+                "Collaborated with the team to develop a computer vision-based cattle weight measurement system as a frontend developer.",
+                "Collected more than 100 cattle images from the Maribaya Cattle Farm in Brebes, Central Java, as training data for the YOLOv5 model."
+            ]
+        }
+    ]
+}

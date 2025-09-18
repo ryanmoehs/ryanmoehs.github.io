@@ -37,18 +37,18 @@ const Projects = ({title, description}: ProjectProps) => {
   }
 
   return (
-    <div className="flex flex-col justify-center gap-4 p-8">
+    <div className="flex flex-col justify-center gap-4 p-4 sm:p-6 md:p-8">
       {title && (
-        <h1 className="text-3xl font-bold mt-8 mb-2 text-center">{title}</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mt-4 sm:mt-8 mb-2 text-center">{title}</h1>
       )}
       {description && (
-        <p className="text-lg mb-6 text-center text-gray-700 dark:text-gray-300">
+        <p className="text-base sm:text-lg mb-4 sm:mb-6 text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
           {description}
         </p>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4 p-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-6 md:p-8">
         {projects.map((project) => (
-          <div key={project.id} onClick={() => handleCardClick(project)} className="cursor-pointer">
+          <div key={project.id} onClick={() => handleCardClick(project)} className="cursor-pointer transform transition-transform hover:scale-105">
             <CardProject image={project.url_image}>
               <CardProject.Heading
                 title={project.title}

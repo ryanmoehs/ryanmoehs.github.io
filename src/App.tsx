@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Playground from './pages/Playground'
 import NotFound from './pages/NotFound'
 import RootLayout from './layouts/RootLayout'
+import Blog from './pages/Blog'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='experience' element={<Experiences title="Experience" description="All my experiences" />}/>
         <Route path='contact' element={<Contact title="Contact" description="Feel free to contact and connect. I'll reply ASAP"/>}/>
         <Route path='playground' element={<Playground title="Playground" description="Coming soon"/>}/>
+        <Route path='blog' element={<Blog title="Playground" description="Coming soon"/>}/>
         <Route path="*" element={<NotFound title="404 Not Found" description="Oops! I think you go to the wrong address"/>}/>
       </Route>
     )

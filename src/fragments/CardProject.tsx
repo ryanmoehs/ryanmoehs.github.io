@@ -15,15 +15,15 @@ const CardProject = ({ image, children, className = "" }: CardProjectProps) => {
   const footer = childrenArray.find((child: any) => child?.type?.displayName === "Footer");
 
   return (
-    <Card className={`h-96 flex flex-col overflow-hidden rounded-2xl p-0 ${className}`}>
+    <Card className={`h-80 sm:h-96 flex flex-col overflow-hidden rounded-2xl p-0 ${className}`}>
       {image && (
         <img
           src={image}
           alt="Product image"
-          className="w-full h-40 object-cover rounded-t-2xl"
+          className="w-full h-32 sm:h-40 object-cover rounded-t-2xl"
         />
       )}
-      <div className="flex flex-col flex-1 gap-y-2 p-4">
+      <div className="flex flex-col flex-1 gap-y-2 p-3 sm:p-4">
         {mainContent}
         <div className="mt-auto">{footer}</div>
       </div>
@@ -35,8 +35,8 @@ const Heading = (props: any) => {
   return (
     <div className='flex flex-col gap-y-2'>
       <div className='flex justify-between align-middle items-center'>
-        <h1 className='text-2xl font-bold'>{props.title}</h1>
-        <Link to={props.link} target="_blank" className="text-lg">
+        <h1 className='text-lg sm:text-xl lg:text-2xl font-bold truncate pr-2'>{props.title}</h1>
+        <Link to={props.link} target="_blank" className="text-base sm:text-lg flex-shrink-0">
           <MdOpenInNew />
         </Link>
       </div>
@@ -82,14 +82,14 @@ const TechStack = (props: any) => {
   const visibleTechs = techs.slice(0, 3);
   const moreCount = techs.length - 3;
   return (
-    <div className='flex gap-x-2'>
-      {visibleTechs.map((tech, idx) => (
-        <div key={idx} className='flex p-2 w-fit text-center rounded-lg border border-black bg-amber-950 dark:bg-slate-700 text-white dark:border-white'>
+    <div className='flex gap-x-1 sm:gap-x-2 flex-wrap'>
+      {visibleTechs.map((tech:any, idx:any) => (
+        <div key={idx} className='flex p-1 sm:p-2 w-fit text-center rounded-lg border border-black bg-amber-950 dark:bg-slate-700 text-white dark:border-white text-xs sm:text-sm'>
           {tech}
         </div>
       ))}
       {moreCount > 0 && (
-        <div className='flex p-2 w-fit text-center rounded-lg border border-dashed border-black bg-transparent dark:border-white text-black dark:text-white'>
+        <div className='flex p-1 sm:p-2 w-fit text-center rounded-lg border border-dashed border-black bg-transparent dark:border-white text-black dark:text-white text-xs sm:text-sm'>
           +{moreCount} more
         </div>
       )}
